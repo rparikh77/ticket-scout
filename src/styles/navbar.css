@@ -1,0 +1,22 @@
+
+.navbar-container {
+    margin: auto;
+    display: flex;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.543);
+    max-width: 10000px;
+    width: 100%;
+}
+.navbar-container img {
+    max-width: 10000px;
+    width: 25%;
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-container img {
+        width: 50%;
+        margin: auto;
+    }
+}

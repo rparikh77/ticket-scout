@@ -1,9 +1,8 @@
 import React from 'react'
 
-function Home() {
+const Home: React.FC = () => {
   return (
     <div className='home-container'>
-      <h1>Hello World</h1>
     </div>
   )
 }
