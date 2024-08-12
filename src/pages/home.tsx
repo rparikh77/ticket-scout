@@ -1,24 +1,17 @@
 import React, { useState } from 'react';
+import { searchTicketmasterEvents, Event } from '../api/ticketmaster';
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [events, setEvents] = useState<any[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchTerm) return;
 
-    const apiKey = '1yNSHGI8GuFQjTWRh7aSUqrbZ76eoBs8'; // Replace with your actual API key
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchTerm}&apikey=${apiKey}`;
-
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      if (data._embedded && data._embedded.events) {
-        setEvents(data._embedded.events);
-      } else {
-        setEvents([]);
-      }
+      const fetchedEvents = await searchTicketmasterEvents(searchTerm);
+      setEvents(fetchedEvents);
     } catch (error) {
       console.error('Error fetching events:', error);
       setEvents([]);
@@ -27,7 +20,6 @@ const Home: React.FC = () => {
 
   return (
     <div className='home-container'>
-      
       <form onSubmit={handleSearch} className='search-form'>
         <input
           type='text'
@@ -36,7 +28,6 @@ const Home: React.FC = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className='search-bar'
         />
-        
         <button type='submit' className='search-button'>Search</button>
       </form>
 
@@ -45,8 +36,9 @@ const Home: React.FC = () => {
           events.map(event => (
             <div key={event.id} className='event-item'>
               <h2>{event.name}</h2>
-              <p>{event.dates.start.localDate}</p>
-              <p>{event._embedded.venues[0].name}</p>
+              <p>Date: {event.date}</p>
+              <p>Venue: {event.venue}</p>
+              <p>Price: {event.price ? `$${event.price}` : 'N/A'}</p>
               <a href={event.url} target='_blank' rel='noopener noreferrer'>More Info</a>
             </div>
           ))
