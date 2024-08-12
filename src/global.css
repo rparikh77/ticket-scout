@@ -7,9 +7,9 @@
 /* Home Container */
 
 .home-container {
-    padding-top: 20%;
-    display: flex;
+    padding-top: 8%;
     width: 80%;
+    margin: 0 auto;
     text-align: center;
   }
   
