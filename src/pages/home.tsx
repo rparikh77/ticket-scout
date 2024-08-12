@@ -39,12 +39,7 @@ const Home: React.FC = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className='search-bar'
         />
-        <input
-          type='date'
-          value={eventDate}
-          onChange={(e) => setEventDate(e.target.value)}
-          className='date-picker'
-        />
+        
         <button type='submit' className='search-button'>Search</button>
       </form>
 
