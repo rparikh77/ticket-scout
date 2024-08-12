@@ -1,29 +1,38 @@
-
 * {
     box-sizing: border-box;
-    margin: auto;
 }
 .navbar-container {
     margin: auto;
+    align-items: center;
     display: flex;
     position: fixed;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.543);
     max-width: 10000px;
     width: 100%;
+    
+}
+.navbar-container a {
+    display: inline-block; 
+    width: auto; 
+    margin-left: 0;
 }
 .navbar-container img {
     background-color: inherit;
-    width: 20%;
-    margin-left: 0;
+    width: auto; 
+    height: 80px;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
+    .navbar-container {
+        justify-content: center; 
+    }
+    .navbar-container a {
+        width: auto; 
+        margin: 0; 
+    }
     .navbar-container img {
-        width: 50%;
-        margin: 0 auto;
-        align-items: center;
-        justify-items: center;
+        height: 80px; 
     }
 }
