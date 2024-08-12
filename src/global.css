@@ -1,76 +1,76 @@
 *{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-    padding: auto;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: auto;
 }
-/* Home Container */
+
 
 .home-container {
-    padding-top: 8%;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .search-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
-  }
-  
-  .search-bar, .date-picker {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    width: 250px; /* Adjust the width as needed */
-  }
-  
-  .search-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .search-button:hover {
-    background-color: #0056b3;
-  }
+  padding-top: 8%;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 
-  .event-results {
-    margin-top: 2rem;
-    text-align: left;
-  }
-  
-  .event-item {
-    background-color: #f8f8f8;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-  }
-  
-  .event-item h2 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  .event-item p {
-    margin: 0.5rem 0;
-  }
-  
-  .event-item a {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  .event-item a:hover {
-    text-decoration: underline;
-  }
-  
-  
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.search-bar, .date-picker {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  width: 250px; /* Adjust the width as needed */
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.event-results {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.event-item {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.event-item h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.event-item p {
+  margin: 0.5rem 0;
+}
+
+.event-item a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.event-item a:hover {
+  text-decoration: underline;
+}
+
