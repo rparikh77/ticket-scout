@@ -9,22 +9,20 @@ const Error: React.FC = () => {
     const timer = setTimeout(() => {
       setLoading(false);
       window.location.href = '/'; 
-    }, 2000); 
+    }, 5000); 
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className='error-container'> {/* used a Ternary Operator */}
+    <div className='error-container'>
       {loading ? (
         <div className='loading'>
           <h1>404</h1>
           <p>Redirecting Back to Home Page</p>
           <FaSpinner className='spinner' /> 
         </div>
-      ) : (
-        <h1>Redirecting...</h1>
-      )}
+      ) : null}
     </div>
   );
 }

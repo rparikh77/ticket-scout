@@ -18,7 +18,6 @@
   
   .error-container h1 {
     color: #ffffff;
-    padding-top: 15%;
     text-align: center;
     font-size: 200px;
     text-shadow: 0 4px 8px rgb(0, 0, 0);
@@ -34,5 +33,11 @@
     color: #2C3A8C;
     animation: spin 1s linear infinite;
     margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .error-container {
+      height: 80vh;
+    }
   }
   
