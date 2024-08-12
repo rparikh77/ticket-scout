@@ -5,16 +5,13 @@
     padding: auto;
 }
 
-.home-container h1{
-    padding-top: 5%;
-    padding-left: 10px;
-}
 
 .home-container {
+    padding-top: 8%;
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 2rem 0;
+
   }
   
   .search-form {
@@ -46,4 +43,35 @@
   .search-button:hover {
     background-color: #0056b3;
   }
+
+  .event-results {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .event-item {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  
+  .event-item h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .event-item p {
+    margin: 0.5rem 0;
+  }
+  
+  .event-item a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .event-item a:hover {
+    text-decoration: underline;
+  }
+  
   
