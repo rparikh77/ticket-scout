@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [eventDate, setEventDate] = useState('');
   const [events, setEvents] = useState<any[]>([]);
 
   const handleSearch = async (e: React.FormEvent) => {
@@ -10,8 +9,7 @@ const Home: React.FC = () => {
     if (!searchTerm) return;
 
     const apiKey = '1yNSHGI8GuFQjTWRh7aSUqrbZ76eoBs8'; // Replace with your actual API key
-    const formattedDate = eventDate ? `&startDateTime=${eventDate}T00:00:00Z` : '';
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchTerm}${formattedDate}&apikey=${apiKey}`;
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchTerm}&apikey=${apiKey}`;
 
     try {
       const response = await fetch(url);
@@ -29,7 +27,6 @@ const Home: React.FC = () => {
 
   return (
     <div className='home-container'>
-      <h1>Search Events</h1>
       
       <form onSubmit={handleSearch} className='search-form'>
         <input
