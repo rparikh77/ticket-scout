@@ -9,14 +9,16 @@
     width: 100%;
 }
 .navbar-container img {
-    max-width: 10000px;
-    width: 25%;
+    width: 20%;
     margin-left: 0;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .navbar-container img {
         width: 50%;
-        margin: auto;
+        margin: 0 auto;
+        align-items: center;
+        justify-items: center;
     }
 }
