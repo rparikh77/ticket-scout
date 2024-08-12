@@ -13,6 +13,7 @@
     width: 100%;
 }
 .navbar-container img {
+    background-color: inherit;
     width: 20%;
     margin-left: 0;
     cursor: pointer;
