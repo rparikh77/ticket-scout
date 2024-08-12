@@ -9,7 +9,7 @@ const Error: React.FC = () => {
     const timer = setTimeout(() => {
       setLoading(false);
       window.location.href = '/'; 
-    }, 5000); 
+    }, 2000); 
 
     return () => clearTimeout(timer);
   }, []);
