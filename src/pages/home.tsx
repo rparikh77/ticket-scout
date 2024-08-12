@@ -7,39 +7,13 @@ const Home: React.FC = () => {
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
     
     // Add logic here to search for events using searchTerm and eventDate
     console.log('Searching for:', searchTerm, eventDate);
-=======
-    if (!searchTerm) return;
-
-    const apiKey = '1yNSHGI8GuFQjTWRh7aSUqrbZ76eoBs8'; // Replace with your actual API key
-    const formattedDate = eventDate ? `&startDateTime=${eventDate}T00:00:00Z` : '';
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchTerm}${formattedDate}&apikey=${apiKey}`;
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      if (data._embedded && data._embedded.events) {
-        setEvents(data._embedded.events);
-      } else {
-        setEvents([]);
-      }
-    } catch (error) {
-      console.error('Error fetching events:', error);
-      setEvents([]);
-    }
->>>>>>> 0ffb607e433231713100fd44f0c1daf2b62cca70
   };
 
   return (
     <div className='home-container'>
-<<<<<<< HEAD
-
-=======
-      <h1>Search Events</h1>
->>>>>>> 0ffb607e433231713100fd44f0c1daf2b62cca70
       
       <form onSubmit={handleSearch} className='search-form'>
         <input
