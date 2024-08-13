@@ -9,17 +9,17 @@ const Home: React.FC = () => {
   const [imageMap, setImageMap] = useState<Record<string, string>>({});
 
   useEffect(() => {
-    // Load the image map when the component mounts
+    
     setImageMap(eventImages);
   }, []);
 
   const getEventImage = (eventName: string): string => {
-    // Check if the event name contains any of the keywords
+    
     const keyword = Object.keys(imageMap).find(key => 
       eventName.toLowerCase().includes(key.toLowerCase())
     );
     
-    // Return the corresponding image URL or the default image
+
     return keyword ? imageMap[keyword] : imageMap.default;
   };
 
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
             <div key={event.id} className='event-item'>
               <img 
                 src={getEventImage(event.name)} 
-                alt={event.name} 
+                alt=""
                 className='event-image'
               />
               <div className='event-details'>
