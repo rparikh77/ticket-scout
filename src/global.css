@@ -10,6 +10,7 @@
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 40%;
 }
 
 .search-form {
@@ -20,6 +21,7 @@
   max-width: 600px;
   margin: 2rem auto 0;
 }
+
 
 .search-bar, .date-picker {
   padding: 0.75rem;
@@ -123,9 +125,17 @@
   cursor: pointer;
 }
 
+
+
+
+
+
+
+
 @media (max-width: 768px) {
   .home-container {
     padding-top: 20%;
+    margin-bottom: 200%;
   }
 
   .event-image {
