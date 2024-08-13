@@ -41,11 +41,13 @@ const Home: React.FC = () => {
               <p>Date: {event.date}</p>
               <p>Venue: {event.venue}</p>
               <p>Price starting at: {event.price ? `$${event.price}` : 'N/A'}</p>
-              <a href={event.url} target='_blank' rel='noopener noreferrer'>More Info</a>
+              <a href={event.url} target='_blank' rel='noopener noreferrer'>
+                <button>Buy Tickets</button>
+              </a>
             </div>
           ))
         ) : hasSearched ? (
-          <p>No events found.</p>
+          <p className='noevent'>No events found.</p>
         ) : null}
       </div>
     </div>

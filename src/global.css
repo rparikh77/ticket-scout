@@ -19,7 +19,8 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 2rem;
+  max-width: 600px;
+  margin: 2rem auto 0;
 }
 
 .search-bar, .date-picker {
@@ -27,7 +28,7 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 25px;
-  width: 250px; /* Adjust the width as needed */
+  width: 800px; 
 }
 
 .search-button {
@@ -35,22 +36,28 @@
   font-size: 1rem;
   border: none;
   border-radius: 25px;
-  background-color: #007BFF;
+  background-color: #0056b3;
   color: white;
-  cursor: pointer;
 }
 
 .search-button:hover {
-  background-color: #0056b3;
+  background-color: #0a3a6d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.541);
+  cursor: pointer;
+  animation: background-color 0.3 ease;
 }
 
 .event-results {
   margin-top: 2rem;
   text-align: left;
 }
+.event-results .noevent {
+  color: white;
+}
 
 .event-item {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px #0056b3;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 10px;
@@ -73,9 +80,37 @@
 .event-item a:hover {
   text-decoration: underline;
 }
+.event-item button {
+  align-items: center;
+  justify-content: center;
+  background-color: #0056b3;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: auto;
+  min-width: 10%;
+  font-size: 15px;
+  color: white;
+  height: auto;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.event-item button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.event-item button:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.447);
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
   .home-container {
     padding-top: 20%;
+  }
+  .event-item button {
+    width: 50%;
   }
 }
