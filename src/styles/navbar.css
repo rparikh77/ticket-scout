@@ -10,29 +10,25 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.543);
     max-width: 10000px;
     width: 100%;
+
     
 }
-.navbar-container a {
-    display: inline-block; 
-    width: auto; 
-    margin-left: 0;
-}
+
 .navbar-container img {
     background-color: inherit;
     width: auto; 
     height: 80px;
     cursor: pointer;
+    margin-left: 0;
 }
 
 @media (max-width: 768px) {
     .navbar-container {
         justify-content: center; 
     }
-    .navbar-container a {
-        width: auto; 
-        margin: 0; 
-    }
+
     .navbar-container img {
         height: 80px; 
+        margin: auto;
     }
 }

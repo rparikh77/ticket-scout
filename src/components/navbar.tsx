@@ -1,16 +1,23 @@
 import React from 'react';
 import Logo from '../assets/ticketscoutlogo.png';
 import '../styles/navbar.css';
-import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
+  const handleLogoClick = () => {
+    window.location.reload();
+  };
+
   return (
     <div className='navbar-container'>
-      <Link to='/'>
-        <img src={Logo} alt='logo' className='navbar-logo' />
-      </Link>
+      <img
+        src={Logo}
+        alt='logo'
+        className='navbar-logo'
+        onClick={handleLogoClick}
+        style={{ cursor: 'pointer' }}
+      />
     </div>
-  )
-}
+  );
+};
 
 export { Navbar };

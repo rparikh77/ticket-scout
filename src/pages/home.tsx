@@ -4,11 +4,13 @@ import { searchTicketmasterEvents, Event } from '../api/ticketmaster';
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [events, setEvents] = useState<Event[]>([]);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchTerm) return;
 
+    setHasSearched(true);
     try {
       const fetchedEvents = await searchTicketmasterEvents(searchTerm);
       setEvents(fetchedEvents);
@@ -42,9 +44,9 @@ const Home: React.FC = () => {
               <a href={event.url} target='_blank' rel='noopener noreferrer'>More Info</a>
             </div>
           ))
-        ) : (
+        ) : hasSearched ? (
           <p>No events found.</p>
-        )}
+        ) : null}
       </div>
     </div>
   );
