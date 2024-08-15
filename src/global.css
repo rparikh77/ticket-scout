@@ -127,20 +127,62 @@
 .live-container {
   margin: auto;
   flex-direction: column;
-  padding-bottom: 50%;
   padding-top: 10%;
+  margin-bottom: 10%;
+  z-index: -1;
 }
 
 .live-container .nba-card {
-  padding: 8%;
+  padding: 2%;
+  border-radius: 25px;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: black;
+
+}
+.live-container .nba-card { /* background opacity */
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .5);
+  background-image: url('../src/assets/wp1827445.jpg');
+  background-blend-mode: multiply;
+}
+
+.nba-card img {
+  width: 40%;
+
+}
+.live-container .nba-card:hover {
+  box-shadow: 0 2px 8px #0056b3;
+  cursor: pointer;
+}
+
+.live-container .nfl-card {
+  padding: 2%;
   border-radius: 25px;
   max-width: 1000px;
   width: 100%;
   text-align: center;
   color: black;
-background-image: url('../src/assets/wp1827445.jpg');
 
 }
+.live-container .nfl-card { /* background opacity */
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .5);
+  background-image: url('../src/assets/nfl.jpg');
+  background-blend-mode: multiply;
+}
+
+.nfl-card img {
+  width: 35%;
+
+}
+.live-container .nfl-card:hover {
+  box-shadow: 0 2px 8px #0056b3;
+  cursor: pointer;
+}
+
 
 
 

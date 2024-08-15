@@ -1,10 +1,16 @@
 import React from 'react';
+import NBA from '../assets/NBA-Logo.png'
+import NFL from '../assets/NFL-logo.png';
 
 const Live: React.FC = () => {
   return (
     <div className='live-container'>
       <div className='nba-card'>
-        <h1>NBA</h1>
+        <img src={NBA}></img>
+      </div>
+
+      <div className='nfl-card'>
+        <img src={NFL}></img>
       </div>
     </div>
   )
