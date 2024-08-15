@@ -13,6 +13,10 @@ const Navbar: React.FC = () => {
     window.location.reload();
   };
 
+  const isLiveScoresActive = () => {
+    return ['/live', '/nba', '/nfl'].includes(location.pathname);
+  };
+
   return (
     <div className='navbar-container'>
       <Link to='/' onClick={handleLogoClick}>
@@ -24,9 +28,8 @@ const Navbar: React.FC = () => {
       </Link>
 
       <ul>
-        <Link to='/live' className={`live ${location.pathname === '/live' ? 'active' : ''}`}>
+        <Link to='/live' className={`live ${isLiveScoresActive() ? 'active' : ''}`}>
           <li>Live Scores</li>
-          
         </Link>
       </ul>
     </div>

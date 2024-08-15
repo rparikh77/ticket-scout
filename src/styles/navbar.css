@@ -10,6 +10,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.543);
     max-width: 10000px;
     width: 100%;
+    z-index: 1000;
+
 
     
 }
@@ -38,7 +40,7 @@
 
 .navbar-container li:hover,
 .navbar-container .live.active li {  
-    background-color: #0056B3;
+    background-color: #042f5d;
     color: white;
     cursor: pointer;
 }

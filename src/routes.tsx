@@ -4,6 +4,8 @@ import { Home } from './pages/home';
 import { Navbar } from './components/navbar';
 import { Error } from './404';
 import { Live } from './pages/live';
+import { NFL } from './pages/nfl';
+import { NBA } from './pages/nba';
 
 const Routing: React.FC = () => {
   return (
@@ -12,6 +14,8 @@ const Routing: React.FC = () => {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/live" element={<Live />} />
+            <Route path="/nfl" element={<NFL />} />
+            <Route path="/nba" element={<NBA />} />
 
             
             {/* 404 Error */}
