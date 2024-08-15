@@ -128,13 +128,18 @@
   margin: auto;
   flex-direction: column;
   padding-bottom: 50%;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 .live-container .nba-card {
+  padding: 8%;
+  border-radius: 25px;
+  max-width: 1000px;
+  width: 100%;
   text-align: center;
   color: black;
-  background-color: #0056b3;
+background-image: url('../src/assets/wp1827445.jpg');
+
 }
 
 
