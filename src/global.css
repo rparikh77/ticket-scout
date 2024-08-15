@@ -124,8 +124,18 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.447);
   cursor: pointer;
 }
+.live-container {
+  margin: auto;
+  flex-direction: column;
+  padding-bottom: 50%;
+  padding-top: 20%;
+}
 
-
+.live-container .nba-card {
+  text-align: center;
+  color: black;
+  background-color: #0056b3;
+}
 
 
 
