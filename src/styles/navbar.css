@@ -48,18 +48,29 @@
     color: black;
 }
 
-.navbar-container .live.active {
-    color: white;  
-}
+
 
 
 @media (max-width: 768px) {
     .navbar-container {
         justify-content: center; 
     }
+    .navbar-container ul {
+        padding-left: 0%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-container li {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
 
     .navbar-container img {
-        height: 80px; 
-        margin: auto;
+        padding-top: 8px;
+        max-width: 240px;
+        padding-left: 8px;
+        left: 0;
+        height: auto;
     }
 }
