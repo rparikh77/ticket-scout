@@ -21,6 +21,37 @@
     cursor: pointer;
     margin-left: 0;
 }
+.navbar-container ul {
+    margin: auto;
+    padding-left: 50%;
+    display: flex;  
+}
+
+.navbar-container li {
+    list-style-type: none;
+    background-color: inherit;
+    padding: 10px 15px;  
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(3, 42, 83, 0.83);  
+    font-weight: bold;
+}
+
+.navbar-container li:hover,
+.navbar-container .live.active li {  
+    background-color: #0056B3;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-container .live {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-container .live.active {
+    color: white;  
+}
+
 
 @media (max-width: 768px) {
     .navbar-container {
